@@ -13,7 +13,8 @@ const LoginScreen = () => {
       payload: { name: "Jonathan" },
     };
     dispatch(action);
-    navigate("/dc", { replace: true });
+    const lastPath = localStorage.getItem("lastPath") || "/marvel";
+    navigate(lastPath, { replace: true });
   };
 
   return (
